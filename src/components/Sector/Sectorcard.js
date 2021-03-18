@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import images from "./ImageHandler";
+import images from "../ImageController/ImageHandler";
 const Sectorcard = ({ name, index }) => {
 	return (
 		<div className="relative w-2/4 m-10 text-indigo-600 transition duration-500 ease-in-out transform bg-gray-100 shadow-xl cursor-pointer rounded-3xl hover:bg-indigo-400 hover:scale-95 hover:text-white md:w-1/5">

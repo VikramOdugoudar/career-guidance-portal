@@ -9,9 +9,9 @@ const JobRoleInformation = () => {
 
 	useEffect(() => {
 		fetchJobInformation();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	console.log(jobDetail);
 	const fetchJobInformation = async () => {
 		const res = await fetch(`http://localhost:8000/${sector}/${jobRole}`);
 		const data = await res.json();

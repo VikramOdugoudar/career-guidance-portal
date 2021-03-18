@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsSearch } from "react-icons/bs";
 import { FaHome } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 const Header = () => {
@@ -17,20 +16,14 @@ const Header = () => {
 						<Link to="/">Transil</Link>
 					</div>
 				</div>
-				<div className="m-0.5 mx-6 mt-5 xs:mt-1">
-					<button className="flex items-center justify-between px-4 py-1 text-indigo-600 transition duration-500 ease-in-out transform bg-white rounded-md hover:bg-indigo-800 hover:scale-x-95 hover:text-white">
-						{pathname !== "/search" ? (
-							<Link to="/search">Search</Link>
-						) : (
+				{pathname === "/" ? null : (
+					<div className="m-0.5 mx-6 mt-5 xs:mt-1">
+						<button className="flex items-center justify-between px-4 py-1 text-indigo-600 transition duration-500 ease-in-out transform bg-white rounded-md hover:bg-indigo-800 hover:scale-x-95 hover:text-white">
 							<Link to="/">Home</Link>
-						)}
-						{pathname !== "/search" ? (
-							<BsSearch className="ml-3" />
-						) : (
 							<FaHome className="ml-3" />
-						)}
-					</button>
-				</div>
+						</button>
+					</div>
+				)}
 			</div>
 		</nav>
 	);
